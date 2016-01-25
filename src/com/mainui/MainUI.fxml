@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="MainPane" prefHeight="483.0" prefWidth="716.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mainui.MainUIController">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="DODGERBLUE" height="485.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="716.0" />
+      <Label layoutX="39.0" layoutY="15.0" prefHeight="17.0" prefWidth="142.0" text="Question Number:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtQuestID" editable="false" layoutX="39.0" layoutY="33.0" prefHeight="25.0" prefWidth="64.0" />
+      <Label layoutX="35.0" layoutY="58.0" prefHeight="53.0" prefWidth="226.0" text="Question:">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="370.0" text="Your Answer:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtAnswer" alignment="CENTER" layoutX="523.0" layoutY="397.0" prefHeight="60.0" prefWidth="105.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <Button fx:id="btnClose" layoutX="684.0" layoutY="11.0" mnemonicParsing="false" onAction="#closeMainUI" style="-fx-background-radius: 50; -fx-background-color: GREEN; -fx-cursor: HAND;" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="lbl_choices" layoutX="33.0" layoutY="233.0" prefHeight="20.0" prefWidth="64.0" text="Choices ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_proceed" layoutX="638.0" layoutY="409.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="65.0" prefWidth="64.0" style="-fx-background-radius: 50; -fx-cursor: HAND; -fx-background-color: GREEN;" text="Proceed" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtCorrectAnswer" layoutX="43.0" layoutY="447.0" prefHeight="25.0" prefWidth="70.0" visible="false" />
+      <Label alignment="TOP_LEFT" layoutX="314.0" layoutY="8.0" prefHeight="20.0" prefWidth="105.0" text="Your Score" textFill="#119400">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtScore" alignment="CENTER" editable="false" layoutX="317.0" layoutY="31.0" prefHeight="53.0" prefWidth="105.0" text="0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></TextField>
+      <TextArea fx:id="txt_question" editable="false" layoutX="39.0" layoutY="111.0" prefHeight="118.0" prefWidth="660.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="563.0" layoutY="7.0" text="Time Left:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="timerLabel" alignment="TOP_CENTER" layoutX="575.0" layoutY="28.0" prefHeight="35.0" prefWidth="81.0" text="0" />
+      <Label alignment="CENTER" layoutX="430.0" layoutY="8.0" prefHeight="20.0" prefWidth="105.0" text="Total Mistakes:" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMistakes" alignment="CENTER" editable="false" layoutX="437.0" layoutY="31.0" prefHeight="53.0" prefWidth="105.0" text="0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </TextField>
+      <Label layoutX="572.0" layoutY="67.0" prefHeight="17.0" prefWidth="112.0" text="Seconds" textFill="#170000">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentExaminee" alignment="TOP_CENTER" layoutX="300.0" layoutY="7.0" prefHeight="17.0" prefWidth="180.0" text="------------" visible="false" />
+      <Label fx:id="examineeAccesLevel" layoutX="358.0" layoutY="24.0" prefHeight="17.0" prefWidth="156.0" text="--------------" visible="false" />
+      <GridPane layoutX="32.0" layoutY="262.0" prefHeight="118.0" prefWidth="669.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="0.0" prefWidth="41.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="628.0" minWidth="10.0" prefWidth="628.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lbl_a" prefHeight="17.0" prefWidth="650.0" text="Label" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_b" prefHeight="17.0" prefWidth="632.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_c" prefHeight="17.0" prefWidth="632.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_d" prefHeight="17.0" prefWidth="650.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="A">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="B" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="C" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="D" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

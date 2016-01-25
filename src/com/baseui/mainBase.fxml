@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="parentPane" prefHeight="610.0" prefWidth="846.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.baseui.MainBaseController">
+   <children>
+      <Rectangle fx:id="rect" arcHeight="50.0" arcWidth="50.0" fill="DODGERBLUE" height="610.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="846.0" />
+      <Button fx:id="btnConfig" layoutX="643.0" layoutY="4.0" mnemonicParsing="false" onAction="#AddQuestionForm" prefHeight="53.0" prefWidth="56.0" style="-fx-background-radius: 50; -fx-background-color: GREEN; -fx-cursor: HAND;" text="Config" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <AnchorPane fx:id="basePane" layoutX="15.0" layoutY="100.0" prefHeight="490.0" prefWidth="816.0" style="-fx-background-color: TRANSPARENT;">
+         <children>
+            <Label layoutX="609.0" layoutY="316.0" prefHeight="17.0" prefWidth="201.0" text="Made and Developed  by Novi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label alignment="TOP_CENTER" layoutX="608.0" layoutY="471.0" prefHeight="17.0" prefWidth="201.0" text="Pinoy Programmers League PH" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="132.0" fitWidth="194.0" layoutX="612.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/ppl2-small.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="125.0" fitWidth="160.0" layoutX="452.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/javafx_logo.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="452.0" layoutY="471.0" prefHeight="17.0" prefWidth="135.0" text="Java FX Platform" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="452.0" layoutY="316.0" prefHeight="17.0" prefWidth="135.0" text="Made Possible" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnStart" layoutX="326.0" layoutY="119.0" mnemonicParsing="false" onAction="#startQuiz" prefHeight="148.0" prefWidth="154.0" style="-fx-background-radius: 80; -fx-background-color: GREEN; -fx-cursor: HAND;" text="Start Quiz !" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <Button layoutX="775.0" layoutY="4.0" mnemonicParsing="false" onAction="#Exit" prefHeight="53.0" prefWidth="56.0" style="-fx-background-radius: 50; -fx-background-color: GREEN; -fx-cursor: HAND;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <TextField fx:id="txtUser" alignment="TOP_CENTER" editable="false" layoutX="501.0" layoutY="7.0" prefHeight="25.0" prefWidth="69.0" text="Guest" visible="false" />
+      <Label fx:id="accesLevel" layoutX="457.0" layoutY="40.0" prefHeight="17.0" prefWidth="113.0" text="---------------------" textFill="WHITE" visible="false" />
+      <Button fx:id="btnScores" layoutX="711.0" layoutY="5.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="56.0" style="-fx-background-radius: 50; -fx-background-color: GREEN; -fx-cursor: HAND;" text="Scores" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="50.0" fill="WHITE" height="17.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="846.0">
+         <effect>
+            <DropShadow />
+         </effect></Rectangle>
+      <Label layoutX="24.0" layoutY="11.0" prefHeight="41.0" prefWidth="476.0" text="JavaFX Questionnaire App 1.0.0" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow radius="4.75" spread="0.06" width="0.0" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
